@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.card-container {
+    width: 100%;
+    overflow-x: auto; /* Membuat kontainer dapat digulir secara horizontal */
+    white-space: nowrap; /* Menghindari pemisahan teks */
+}
+.card-container::-webkit-scrollbar {
+  width: 0;
+}
+
+.card {
+    display: inline-block;
+    width: 250px;
+    height: max-content;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 24px;
+}
+
+
+
+/* !! Skeleton Loading */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    height: 400px;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+
+@keyframes loadingDua {
+    0% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+.text_animation{
+    animation: loadingDua 1.5s infinite;
+}
+.skeleton-title {
+    width: 80%;
+    height: 16px;
+    background-color: #745b5b;
+    margin:auto;
+    margin-top: 135%;
+    animation: loadingDua 1.5s infinite;
+}
+
+.skeleton-description {
+    width: 80%;
+    height: 16px;
+    background-color: #adabab;
+    margin:auto;
+    margin-top: 7%;
+    animation: loadingDua 1.5s infinite;
+}
+
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+
+
+/* Gaya untuk perangkat dengan lebar layar kurang dari 768px (mobile) */
+@media (max-width: 768px) {
+    .skeleton-card {
+        width: 90%; /* Lebar penuh pada tampilan mobile */
+        margin: 10px; /* Margin yang lebih kecil untuk tampilan mobile */
+    }
+}
+
+/* Gaya untuk perangkat dengan lebar layar antara 769px dan 1024px (tablet) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .skeleton-card {
+        width: 48%; /* Lebar yang lebih kecil pada tampilan tablet */
+        margin: 10px; /* Margin yang lebih kecil pada tampilan tablet */
+    }
+}
+
+/* Gaya untuk perangkat dengan lebar layar lebih dari 1024px (desktop) */
+@media (min-width: 1025px) {
+    /* Tidak perlu perubahan gaya khusus untuk desktop dalam contoh ini */
+    /* Anda dapat menambahkan gaya tambahan jika diperlukan */
+}
+.body_html{
+    width:100%; height: 100dvh; background-color: white; position: fixed; z-index: 2; margin-top: 7vmax;
+
+}
+
+/* !! logo thx menu */
+/* !! Responsive Desktop */
+.border{
+    width: 70%;
+    height: 80vh;
+    margin:5vmax auto;
+    background-color: aquamarine;
+}
